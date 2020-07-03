@@ -7,26 +7,34 @@ buildHomePage();
 // buildMenuPage();
 
 const contentDiv = document.querySelector("#content");
+const nav = document.querySelector("#nav");
 
 const homeTab = document.createElement("button");
-homeTab.innerText = "HOME";
+homeTab.textContent = "HOME";
 const menuTab = document.createElement("button");
-menuTab.innerText = "MENU";
+menuTab.textContent = "MENU";
 const contactTab = document.createElement("button");
-contactTab.innerText = "CONTACT";
+contactTab.textContent = "CONTACT";
 
 const tabs = [homeTab, menuTab, contactTab];
 
-tabs.forEach((tab) => contentDiv.appendChild(tab));
+tabs.forEach((tab) => nav.appendChild(tab));
+
+const clearContent = () => {
+  contentDiv.innerHTML = "";
+};
 
 homeTab.addEventListener("click", () => {
-  //
+  clearContent();
+  buildHomePage();
 });
 
 menuTab.addEventListener("click", () => {
-  //
+  clearContent();
+  buildMenuPage();
 });
 
 contactTab.addEventListener("click", () => {
-  //
+  clearContent();
+  buildContactPage();
 });

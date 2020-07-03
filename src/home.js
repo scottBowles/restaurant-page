@@ -7,11 +7,11 @@ function buildHomePage() {
   contentDiv.appendChild(mainImage);
 
   const header = document.createElement("h1");
-  header.innerText = "Corcovado";
+  header.textContent = "Corcovado";
   contentDiv.appendChild(header);
 
   const copytext = document.createElement("p");
-  copytext.innerText =
+  copytext.textContent =
     "Brazilian warmth. Ethically sourced coffee. A whole lotta bossa.";
   contentDiv.appendChild(copytext);
 }

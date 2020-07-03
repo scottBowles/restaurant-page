@@ -3,14 +3,14 @@ const menuItemFactory = (name, price) => {
 };
 
 const menuItems = {
-  brewedCoffee: menuItemFactory("Brewed Coffee", 1.95),
-  soloEspresso: menuItemFactory("Solo Espresso", 1.25),
-  doubleEspresso: menuItemFactory("Double Espresso", 1.8),
-  americano: menuItemFactory("Americano", 2.05),
-  latte: menuItemFactory("Cafe Latte", 3.15),
-  mocha: menuItemFactory("Cafe Mocha", 3.95),
-  earlGrey: menuItemFactory("Earl Grey Tea", 1.75),
-  yerbaMate: menuItemFactory("Yerba Mate", 1.75),
+  brewedCoffee: menuItemFactory("Brewed Coffee", "1.95"),
+  soloEspresso: menuItemFactory("Solo Espresso", "1.25"),
+  doubleEspresso: menuItemFactory("Double Espresso", "1.80"),
+  americano: menuItemFactory("Americano", "2.05"),
+  latte: menuItemFactory("Cafe Latte", "3.15"),
+  mocha: menuItemFactory("Cafe Mocha", "3.95"),
+  earlGrey: menuItemFactory("Earl Grey Tea", "1.75"),
+  yerbaMate: menuItemFactory("Yerba Mate", "1.75"),
 };
 
 function buildMenuPage() {
@@ -21,10 +21,10 @@ function buildMenuPage() {
   const headingRow = document.createElement("tr");
   menuTable.appendChild(headingRow);
   const nameHeading = document.createElement("th");
-  nameHeading.innerText = "Name";
+  nameHeading.textContent = "Name";
   headingRow.appendChild(nameHeading);
   const priceHeading = document.createElement("th");
-  priceHeading.innerText = "Price";
+  priceHeading.textContent = "Price";
   headingRow.appendChild(priceHeading);
 
   Object.keys(menuItems).forEach((menuItem) => {
@@ -32,9 +32,9 @@ function buildMenuPage() {
     const row = document.createElement("tr");
     menuTable.append(row);
     const nameCell = document.createElement("td");
-    nameCell.innerText = name;
+    nameCell.textContent = name;
     const priceCell = document.createElement("td");
-    priceCell.innerText = price;
+    priceCell.textContent = price;
     row.appendChild(nameCell);
     row.appendChild(priceCell);
   });
