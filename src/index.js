@@ -1,4 +1,10 @@
-import home from "./home";
+import { buildHomePage } from "./home";
+import { buildMenuPage } from "./menu";
+import { buildContactPage } from "./contact";
+
+buildHomePage();
+// buildContactPage();
+// buildMenuPage();
 
 const contentDiv = document.querySelector("#content");
 
@@ -12,3 +18,15 @@ contactTab.innerText = "CONTACT";
 const tabs = [homeTab, menuTab, contactTab];
 
 tabs.forEach((tab) => contentDiv.appendChild(tab));
+
+homeTab.addEventListener("click", () => {
+  //
+});
+
+menuTab.addEventListener("click", () => {
+  //
+});
+
+contactTab.addEventListener("click", () => {
+  //
+});
