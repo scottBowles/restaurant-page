@@ -2,7 +2,7 @@ function buildHomePage() {
   const contentDiv = document.querySelector("#content");
 
   const mainImage = document.createElement("img");
-  mainImage.src = "../src/assets/background.jpg";
+  mainImage.src = "./assets/background.jpg";
   mainImage.style = "width: 800px";
   contentDiv.appendChild(mainImage);
 
